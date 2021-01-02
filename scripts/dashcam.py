@@ -65,6 +65,8 @@ else:
 if not os.path.exists(videos_folder):
 	os.makedirs(videos_folder)
 	print ('Created videos folder.')
+else:
+	print ('Video folder found')
 
 with picamera.PiCamera() as camera:
 	camera.resolution = (1920,1080)
