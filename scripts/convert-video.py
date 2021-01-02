@@ -20,7 +20,9 @@ else:
 
 	i=START_INDEX
 
-	dirs = os.listdir( path )
+	path = folder_root + videos_folder
+	
+	dirs = os.listdir(path)
 	for file in dirs:
 		input_file = folder_root + videos_folder + "/video%05d.h264" % i
 		output_file = folder_root + output_folder + "/video%05d.mp4" % i
