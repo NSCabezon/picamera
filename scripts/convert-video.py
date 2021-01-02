@@ -11,7 +11,7 @@ if pathExists:
 else:
 	print("1 no")
 
-path2 = "videos/video00003.h264"
+path2 = os.path.join("videos", "video00003.h264")
 path2Exists = os.path.exists(path2)
 if path2Exists:
 	print("2 yes")
