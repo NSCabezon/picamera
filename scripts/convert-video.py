@@ -4,20 +4,9 @@ import os
 START_INDEX = 0
 END_INDEX = 40
 
-path = "videos"
-pathExists = os.path.exists(path)
-if pathExists:
-	print("1 yes")
-else:
-	print("1 no")
-
-path2 = os.path.join("videos", "video00003.h264")
-print(path2)
-path2Exists = os.path.exists(path2)
-if path2Exists:
-	print("2 yes")
-else:
-	print("2 no")
+folder_root = "/home/pi/"
+videos_folder = "videos"
+output_folder = "output"
 
 print("Starting conversion...")
 if START_INDEX > END_INDEX:
@@ -31,8 +20,8 @@ else:
 
 	i=START_INDEX
 	while(i <= END_INDEX):
-		input_file =  "videos/video%05d.h264" % i
-		output_file = "output/video%05d.mp4" % i
+		input_file =  folder_root + videos_folder + "video%05d.h264" % i
+		output_file = folder_root + output_folder + "video%05d.mp4" % i
 		i = i + 1
 
 		print("Checking for existance of:  <<" + input_file + ">>")
