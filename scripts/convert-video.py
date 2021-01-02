@@ -22,8 +22,8 @@ else:
 
 	dirs = os.listdir( path )
 	for file in dirs:
-		input_file = folder_root + videos_folder + "video%05d.h264" % i
-		output_file = folder_root + output_folder + "video%05d.mp4" % i
+		input_file = folder_root + videos_folder + "/video%05d.h264" % i
+		output_file = folder_root + output_folder + "/video%05d.mp4" % i
 		i = i + 1
 
 		print("Checking for existance of:  <<" + file + ">>")
