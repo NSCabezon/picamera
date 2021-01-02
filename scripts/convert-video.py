@@ -6,10 +6,17 @@ END_INDEX = 40
 
 path = "videos"
 pathExists = os.path.exists(path)
-print("'videos' exists: " + if pathExists "yes" else "no")
+if pathExists:
+	print("1 yes")
+else:
+	print("1 no")
+
 path2 = "videos/video00003.h264"
 path2Exists = os.path.exists(path2)
-print("'videos/video00003.h264' exists: " + if path2Exists "yes" else "no")
+if path2Exists:
+	print("2 yes")
+else:
+	print("2 no")
 
 print("Starting conversion...")
 if START_INDEX > END_INDEX:
