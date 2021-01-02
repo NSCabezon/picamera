@@ -92,26 +92,7 @@ with picamera.PiCamera() as camera:
 		timeout = time.time() + DURATION
 
 		camera.start_recording(file_name, quality = 20)
-		while(time.time() < timeout):
-			gps_str = serialPort.readline()
 
-		      	if gps_str.find('GGA') > 0:
-		    	    	msg = pynmea2.parse(gps_str)
-        		       	camera.annotate_background = Color('black')
-               			camera.annotate_text = "TME:%s LAT:%s %s LON:%s %s ALT:%s %s SAT:%s CPU:%s" % (msg.timestamp, msg.lat, msg.lat_dir, msg.lon, msg.lon_dir, msg.altitude, msg.altitude_units, msg.num_sats, psutil.cpu_percent())
-
-			if GPIO.input(LED_PIN):
-				GPIO.output(LED_PIN, GPIO.LOW)
-			else:
-				GPIO.output(LED_PIN, GPIO.HIGH)
-
-			check_space()
-
-			if(GPIO.input(SWITCH_PIN) == 0):
-				print('Shutting down...')
-				camera.stop_recording()
-				time.sleep(3)
-				os.system("sudo shutdown -h now")
-
-			time.sleep(0.02)
+		time.sleep(30)
 		camera.stop_recording()
+		time.sleep(3)
