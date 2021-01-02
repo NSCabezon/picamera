@@ -20,7 +20,6 @@ POWER_PIN = 27
 
 folder_root = "/home/pi/"
 videos_folder = "videos/"
-port = "/dev/serial0"
 file_number = 0
 
 def clear_space():
@@ -44,15 +43,6 @@ def check_space():
 		clear_space()
 
 check_space()
-
-serialPort = serial.Serial(port, baudrate = 9600, timeout = 0.5)
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
-GPIO.setup(POWER_PIN, GPIO.OUT)
-GPIO.output(POWER_PIN, GPIO.LOW)
-GPIO.setup(SWITCH_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(LED_PIN, GPIO.OUT)
-GPIO.output(LED_PIN, GPIO.LOW)
 
 print('Obtaining file number')
 
