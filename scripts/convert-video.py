@@ -1,7 +1,7 @@
 
 import os
 
-START_INDEX = 28
+START_INDEX = 0
 END_INDEX = 40
 
 print("Starting conversion...")
@@ -19,6 +19,9 @@ else:
 		input_file =  "videos/video%05d.h264" % i
 		output_file = "output/video%05d.mp4" % i
 		i = i + 1
+
+		print("Checking for existance of" + input_file)
+
 
 		if os.path.exists(input_file):
 			print("Converting: " + input_file)
