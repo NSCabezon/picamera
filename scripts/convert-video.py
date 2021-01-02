@@ -4,6 +4,11 @@ import os
 START_INDEX = 0
 END_INDEX = 40
 
+path = "videos"
+print("'videos' exists: " + os.path.exists(path))
+path2 = "videos/video00003.h264"
+print("'videos/video00003.h264' exists: " + os.path.exists(path2))
+
 print("Starting conversion...")
 if START_INDEX > END_INDEX:
 	print("Error! Check index values")
@@ -20,7 +25,7 @@ else:
 		output_file = "output/video%05d.mp4" % i
 		i = i + 1
 
-		print("Checking for existance of" + input_file)
+		print("Checking for existance of:  <<" + input_file + ">>")
 
 
 		if os.path.exists(input_file):
