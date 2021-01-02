@@ -11,6 +11,8 @@ else:
 	if not os.path.exists("output/"):
 		os.makedirs("output/")
 		print("Created output folder.")
+	else:
+		print("Output folder found")
 
 	i=START_INDEX
 	while(i <= END_INDEX):
