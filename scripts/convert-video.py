@@ -21,7 +21,7 @@ else:
 	i=START_INDEX
 
 	path = folder_root + videos_folder
-	
+
 	dirs = os.listdir(path)
 	for file in dirs:
 		input_file = folder_root + videos_folder + "/video%05d.h264" % i
@@ -31,7 +31,7 @@ else:
 		print("Checking for existance of:  <<" + file + ">>")
 
 
-		if os.path.exists(file):
+		if os.path.exists(input_file):
 			print("Converting: " + input_file)
 			conversion_command = "MP4Box -add " + input_file + " " + file + ".mp4"
 			print conversion_command
