@@ -23,7 +23,7 @@ with picamera.PiCamera() as camera:
 	
 	file_name = constant.videos_path + timestamp
 	
-	print('Recording to: %s' % file_name)
+	print('Recording to: ' + file_name)
 	print("Time to record '%d' secs" % constant.DURATION_SECS)
 	
 	timeout = time.time() + 60 #constant.DURATION_SECS
