@@ -29,7 +29,9 @@ def record():
 		time.sleep(3)
 
 checks.checkFoldersExistance()
-checks.check_space()
+val = checks.check_space()
 
-while checks.check_space < constant.SPACE_LIMIT:
+print("Percentage: " + val)
+
+while checks.check_space() < constant.SPACE_LIMIT:
 	record()
