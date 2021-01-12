@@ -24,7 +24,7 @@ with picamera.PiCamera() as camera:
 	file_name = constant.videos_path + timestamp
 	
 	print('Recording to %s' % file_name)
-	timeout = time.time() + DURATION_MINS
+	timeout = time.time() + constant.DURATION_MINS
 
 	camera.start_recording(file_name, quality = 20)
 
