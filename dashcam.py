@@ -22,13 +22,14 @@ with picamera.PiCamera() as camera:
 	timestamp = now.strftime("%d-%m-%y_%H:%M:%S")
 	
 	file_name = constant.videos_path + timestamp
+	file_name2 = folder_root + videos_folder + "video%05d" % 1
 	
 	print('Recording to: ' + file_name)
 	print("Time to record '%d' secs" % constant.DURATION_SECS)
 	
-	timeout = time.time() + 60 #constant.DURATION_SECS
+	timeout = time.time() + constant.DURATION_SECS
 
-	camera.start_recording(file_name, quality = 20)
+	camera.start_recording(file_name2, quality = 20)
 
 	time.sleep(30)
 	camera.stop_recording()
