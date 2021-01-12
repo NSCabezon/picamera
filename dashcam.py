@@ -49,7 +49,7 @@ with picamera.PiCamera() as camera:
 	timestamp = now.strftime("%d-%m-%y_%H:%M:%S")
 	
 	file_name = constant.videos_path + timestamp
-	file_name2 = constant.videos_path + "video%05d" % 1
+	file_name2 = constant.videos_path + "video%05d.h264" % 1
 	
 	print('Recording to: ' + file_name)
 	print('Recording to: ' + file_name2)
