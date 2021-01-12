@@ -15,7 +15,7 @@ checks.checkFoldersExistance()
 checks.check_space()
 
 with picamera.PiCamera() as camera:
-	camera.resolution = (1920,1080)
+	camera.resolution = (1920, 1080)
 	camera.framerate = 24
 
 	now = datetime.datetime.now()
@@ -23,8 +23,8 @@ with picamera.PiCamera() as camera:
 	
 	file_name = constant.videos_path + timestamp
 	
-	print('Recording to %s' % file_name)
-	print("Time to record: %d secs" % constant.DURATION_SECS)
+	print('Recording to: %s' % file_name)
+	print("Time to record '%d' secs" % constant.DURATION_SECS)
 	
 	timeout = time.time() + constant.DURATION_SECS
 
