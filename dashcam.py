@@ -16,7 +16,7 @@ with picamera.PiCamera() as camera:
 	camera.framerate = 25
 
 	now = datetime.datetime.now()
-	timestamp = now.strftime("%d-%m-%y_%H:%M:%S")
+	timestamp = now.strftime("%d-%m-%y__%H-%M-%S")
 	
 	file_name = constant.videos_path + timestamp + ".h264"
 	
