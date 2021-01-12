@@ -22,7 +22,8 @@ def record():
 
 		camera.start_recording(file_name, quality = 20)
 
-		time.sleep(constant.DURATION_SECS)
+		camera.wait_recording(constant.DURATION_SECS)
+		
 		camera.stop_recording()
 		time.sleep(3)
 
