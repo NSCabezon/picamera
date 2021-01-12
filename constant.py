@@ -7,4 +7,4 @@ output_folder = "output/"
 videos_path = folder_root + videos_folder
 output_path = folder_root + output_folder
 
-dirs = os.listdir(constant.videos_path)
+dirs = os.listdir(videos_path)
