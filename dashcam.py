@@ -21,7 +21,6 @@ POWER_PIN = 27
 
 folder_root = "/home/pi/"
 videos_folder = "videos/"
-file_number = 0
 
 def clear_space():
 	print('Clearing space...')
