@@ -37,6 +37,3 @@ def check_space():
 	if psutil.disk_usage(".").percent > constant.SPACE_LIMIT:
 		clear_space()
 
-checkFoldersExistance()
-
-check_space()
