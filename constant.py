@@ -1,9 +1,7 @@
 import os
 
 DURATION_SECS = 3600
-SPACE_LIMIT = 13.5  #percent
-MAX_FILES = 99999
-DELETE_FILES = 10
+SPACE_LIMIT = 80  #percent
 
 LED_PIN = 4
 SWITCH_PIN = 17
