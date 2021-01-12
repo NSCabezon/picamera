@@ -1,6 +1,5 @@
 import picamera
 import os
-import psutil
 import serial
 import pynmea2
 import time
@@ -10,12 +9,10 @@ import RPi.GPIO as GPIO
 import constant
 import datetime
 from picamera import Color
+import checks
 
-if not os.path.exists(videos_folder):
-	os.makedirs(videos_folder)
-	print ('Created videos folder.')
-else:
-	print ('Video folder found')
+checks.checkFoldersExistance()
+checks.check_space()
 
 with picamera.PiCamera() as camera:
 	camera.resolution = (1920,1080)
