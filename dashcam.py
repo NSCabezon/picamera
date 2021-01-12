@@ -18,19 +18,16 @@ with picamera.PiCamera() as camera:
 	camera.resolution = (1920,1080)
 	camera.framerate = 24
 
- 	while file_number < MAX_FILES:
-		file_number = file_number + 1
-		
-		now = dt.datetime.now()
-		t = now.strftime("%d-%m-%y_%H:%M:%S")
-		
-		file_name = constant.videos_path + t
-		
-		print('Recording to %s' % file_name)
-		timeout = time.time() + DURATION_SECS
+	now = dt.datetime.now()
+	timestamp = now.strftime("%d-%m-%y_%H:%M:%S")
+	
+	file_name = constant.videos_path + timestamp
+	
+	print('Recording to %s' % file_name)
+	timeout = time.time() + DURATION_MINS
 
-		camera.start_recording(file_name, quality = 20)
+	camera.start_recording(file_name, quality = 20)
 
-		time.sleep(30)
-		camera.stop_recording()
-		time.sleep(3)
+	time.sleep(30)
+	camera.stop_recording()
+	time.sleep(3)
