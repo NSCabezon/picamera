@@ -1,6 +1,6 @@
 import os
 
-DURATION_SECS = 3600
+DURATION_SECS = 600
 SPACE_LIMIT = 80  #percent
 
 LED_PIN = 4
