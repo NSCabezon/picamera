@@ -1,5 +1,5 @@
-import os
 import constant
+import os
 
 dirs = os.listdir(constant.videos_path)
 
