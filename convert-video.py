@@ -33,7 +33,7 @@ else:
 
 		if os.path.exists(input_file):
 			print("Converting: " + input_file)
-			conversion_command = "MP4Box -add " + input_file + " " + file + ".mp4"
+			conversion_command = "MP4Box -add " + input_file + " " + output_file + ".mp4"
 			print conversion_command
 			os.system(conversion_command)
 		else: 
