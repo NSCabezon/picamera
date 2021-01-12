@@ -46,6 +46,13 @@ check_space()
 
 print('Obtaining file number')
 
+
+dirs = os.listdir(videos_path)
+
+dirs.sort
+
+	
+
 if os.path.isfile('config_dashcam.json'):
 	f = open('config_dashcam.json', 'r')
 	config_dashcam = json.load(f)

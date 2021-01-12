@@ -1,6 +1,5 @@
 import os
 
-
 if not os.path.exists(output_path):
 	os.makedirs(output_path)
 	print("Created output folder.")
