@@ -34,6 +34,7 @@ def clear_space():
 	print('Completed.')
 
 def check_space():
+	print("Disk usage " + psutil.disk_usage(".").percent + "%%")
 	if psutil.disk_usage(".").percent > constant.SPACE_LIMIT:
 		clear_space()
 
