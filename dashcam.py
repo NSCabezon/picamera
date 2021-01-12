@@ -50,16 +50,15 @@ videos_folder = "videos/"
 with picamera.PiCamera() as camera:
 	camera.resolution = (1920,1080)
 	camera.framerate = 25
-
- 	while file_number < MAX_FILES:
-		file_number = file_number + 1
-		file_name = folder_root + videos_folder + "video00001.h264"
+	
+	file_number = file_number + 1
+	file_name = folder_root + videos_folder + "video00001.h264"
 		
-		print('Recording to %s' % file_name)
-		timeout = time.time() + DURATION
+	print('Recording to %s' % file_name)
+	timeout = time.time() + DURATION
 
-		camera.start_recording(file_name, quality = 20)
+	camera.start_recording(file_name, quality = 20)
 
-		time.sleep(30)
-		camera.stop_recording()
-		time.sleep(3)
+	time.sleep(30)
+	camera.stop_recording()
+	time.sleep(3)
