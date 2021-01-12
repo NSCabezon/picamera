@@ -6,10 +6,14 @@ def checkFoldersExistance():
 	if not os.path.exists(constant.videos_path):
 		os.makedirs(constant.videos_path)
 		print("Created")
+	else:
+		print("Exists, no need to create it")
 	
 	print("Checking for: " + constant.output_path)
 	if not os.path.exists(constant.output_path):
 		os.makedirs(constant.output_path)
 		print("Created")
+	else:
+		print("Exists, no need to create it")
 
 checkFoldersExistance()
