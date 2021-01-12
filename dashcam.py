@@ -18,7 +18,7 @@ with picamera.PiCamera() as camera:
 	camera.resolution = (1920,1080)
 	camera.framerate = 24
 
-	now = dt.datetime.now()
+	now = datetime.datetime.now()
 	timestamp = now.strftime("%d-%m-%y_%H:%M:%S")
 	
 	file_name = constant.videos_path + timestamp
