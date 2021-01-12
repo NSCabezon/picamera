@@ -7,6 +7,7 @@ import time
 import json
 import itertools
 import RPi.GPIO as GPIO
+import constant
 from picamera import Color
 
 DURATION_MINS = 60
@@ -47,7 +48,7 @@ check_space()
 print('Obtaining file number')
 
 
-dirs = os.listdir(videos_path)
+dirs = os.listdir(constant.videos_path)
 
 dirs.sort
 
