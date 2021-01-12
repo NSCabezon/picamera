@@ -1,7 +1,7 @@
 import os
 
 DURATION_SECS = 3600
-SPACE_LIMIT = 80  #percent
+SPACE_LIMIT = 13.5  #percent
 MAX_FILES = 99999
 DELETE_FILES = 10
 

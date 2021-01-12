@@ -9,7 +9,7 @@ for file in dirs:
 	
 	print("Converting: " + file)
 	conversion_command = "MP4Box -add " + input_file + " " + output_file + ".mp4"
-	print conversion_command
+	print(conversion_command)
 	os.system(conversion_command)
 
 print("Conversion complete.")

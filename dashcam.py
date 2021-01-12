@@ -31,4 +31,5 @@ def record():
 checks.checkFoldersExistance()
 checks.check_space()
 
-# record()
+while checks.check_space < constant.SPACE_LIMIT:
+	record()
