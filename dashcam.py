@@ -9,7 +9,8 @@ import itertools
 import RPi.GPIO as GPIO
 from picamera import Color
 
-DURATION_SECS = 60
+DURATION_MINS = 60
+DURATION_SECS = 60 * DURATION_MINS
 SPACE_LIMIT = 80
 MAX_FILES = 99999
 DELETE_FILES = 10
