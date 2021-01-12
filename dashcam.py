@@ -9,7 +9,7 @@ import itertools
 import RPi.GPIO as GPIO
 from picamera import Color
 
-DURATION = 60
+DURATION_SECS = 60
 SPACE_LIMIT = 80
 MAX_FILES = 99999
 DELETE_FILES = 10
@@ -81,7 +81,7 @@ with picamera.PiCamera() as camera:
 	    		json.dump(config_dashcam, f)
 
 		print('Recording to %s' % file_name)
-		timeout = time.time() + DURATION
+		timeout = time.time() + DURATION_SECS
 
 		camera.start_recording(file_name, quality = 20)
 
