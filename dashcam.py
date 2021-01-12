@@ -10,8 +10,8 @@ import checks
 
 def record():	
 	with picamera.PiCamera() as camera:
-		camera.resolution = (1920,1080)
-		camera.framerate = 25
+		camera.resolution = (1280, 720)
+		camera.framerate = 60
 
 		now = datetime.datetime.now()
 		timestamp = now.strftime("%d-%m-%y__%H-%M-%S")
@@ -23,7 +23,7 @@ def record():
 		camera.start_recording(file_name, quality = 20)
 
 		camera.wait_recording(constant.DURATION_SECS)
-		
+
 		camera.stop_recording()
 		time.sleep(3)
 
