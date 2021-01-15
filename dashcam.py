@@ -27,10 +27,5 @@ def record():
 		camera.stop_recording()
 		time.sleep(3)
 
-checks.checkFoldersExistance()
-val = checks.check_space()
-
-print("Percentage: %f" % val)
-
 while checks.check_space() < constant.SPACE_LIMIT:
 	record()
