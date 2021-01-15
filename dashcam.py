@@ -27,12 +27,3 @@ def record():
 
 		camera.stop_recording()
 		time.sleep(3)
-
-count = 0
-
-while (checks.check_space() < constant.SPACE_LIMIT and count < 3):
-	record()
-	count += 1
-
-if checks.check_space() < constant.SPACE_LIMIT:
-	convertVideo.convertVideos()
