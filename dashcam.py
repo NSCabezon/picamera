@@ -7,6 +7,7 @@ import itertools
 import constant
 import datetime
 import checks
+import convertVideo
 
 def record():	
 	with picamera.PiCamera() as camera:
@@ -32,3 +33,6 @@ count = 0
 while (checks.check_space() < constant.SPACE_LIMIT and count < 3):
 	record()
 	count += 1
+
+if checks.check_space() < constant.SPACE_LIMIT:
+	convertVideo.convertVideos()
