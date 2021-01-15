@@ -13,6 +13,7 @@ def convertVideos():
 			conversion_command = "MP4Box -add " + input_file + " " + output_file
 			print(conversion_command)
 			os.system(conversion_command)
+			os.remove(input_file)
 		else:
 			print("File already converted")
 
