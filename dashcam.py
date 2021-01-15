@@ -10,7 +10,7 @@ import checks
 
 def record():	
 	with picamera.PiCamera() as camera:
-		camera.resolution = (1280, 720)
+		camera.resolution = (constant.resolution_width, constant.resolution_height)
 		camera.framerate = 60
 
 		now = datetime.datetime.now()
