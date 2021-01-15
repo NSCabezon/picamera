@@ -8,10 +8,13 @@ def convertVideos():
 		input_file = constant.videos_path + file
 		output_file = constant.output_path + file
 		
-		print("Converting: " + file)
-		conversion_command = "MP4Box -add " + input_file + " " + output_file + ".mp4"
-		print(conversion_command)
-		os.system(conversion_command)
+		if not os.path.exists(output_file):
+			print("Converting: " + file)
+			conversion_command = "MP4Box -add " + input_file + " " + output_file + ".mp4"
+			print(conversion_command)
+			os.system(conversion_command)
+		else:
+			print("File already converted")
 
 	print("Conversion complete.")
 	
