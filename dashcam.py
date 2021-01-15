@@ -11,7 +11,7 @@ import checks
 def record():	
 	with picamera.PiCamera() as camera:
 		camera.resolution = (constant.resolution_width, constant.resolution_height)
-		camera.framerate = 60
+		camera.framerate = constant.fps
 
 		now = datetime.datetime.now()
 		timestamp = now.strftime("%d-%m-%y__%H-%M-%S")
