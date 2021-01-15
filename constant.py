@@ -5,7 +5,7 @@ resolution_width = 1280
 resolution_height = 720
 fps = 24
 
-MINUTES_TO_RECORD = 1
+MINUTES_TO_RECORD = 10
 DURATION_SECS = 60 * MINUTES_TO_RECORD
 SPACE_LIMIT = 80  #percent
 
