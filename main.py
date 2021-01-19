@@ -18,15 +18,15 @@ def convert():
 		convertVideo.convertVideos()
 
 def moveServo():
-	print("Trying to move servo at GPIO 17")
-	servo = Servo(17)
+	print("Trying to move servo at GPIO 14")
+	servo = Servo(14)
 	servo.max()
 
 print("What do you want to do?")
 print("1 record in chunks of 10 min")
 print("2 manually record non converted videos and delete the original")
 print("3 both")
-print("4 move servo at 17")
+print("4 move servo at 14")
 
 val = input("Enter your value: ")
 if val == 1:
