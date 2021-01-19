@@ -1,6 +1,7 @@
 import picamera
 from picamera import Color
-import RPi.GPIO as GPIO
+from gpiozero import LED
+import time as sleep
 import os
 import time
 import json
@@ -22,14 +23,14 @@ def record():
 		
 		print('Recording to: ' + file_name)
 
-		GPIO.setmode(GPIO.BOARD)
-		GPIO.setup(7, GPIO.OUT)
+		led = LED(23)
+		led.blink()
 
-		while True:
-			GPIO.output(23, True)
-			time.sleep(1)
-			GPIO.output(23, False)
-			time.sleep(1)
+		# while True:
+		# 	led.on()
+		# 	sleep(1)
+		# 	led.off()
+		# 	sleep(1)
 
 		camera.start_recording(file_name, quality = 20)
 
