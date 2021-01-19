@@ -4,7 +4,7 @@ import constant
 import convertVideo
 
 from gpiozero import Servo
-
+import time as sleep
 
 def record():
 	count = 0
@@ -20,7 +20,12 @@ def convert():
 def moveServo():
 	print("Trying to move servo at GPIO 14")
 	servo = Servo(14)
-	servo.max()
+	servo.value = -1
+    sleep(2)
+	servo.value = 0
+    sleep(2)
+	servo.value = 1
+    sleep(2)
 
 print("What do you want to do?")
 print("1 record in chunks of 10 min")
