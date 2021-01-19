@@ -3,6 +3,8 @@ import checks
 import constant
 import convertVideo
 
+from gpiozero import Servo
+
 
 def record():
 	count = 0
@@ -14,6 +16,10 @@ def record():
 def convert():
 	if checks.check_space() < constant.SPACE_LIMIT:
 		convertVideo.convertVideos()
+
+def moveServo():
+	servo = Servo(17)
+	servo.max()
 
 print("What do you want to do?")
 print("1 record in chunks of 10 min")
@@ -28,4 +34,6 @@ elif val == 2:
 elif val == 3: 
 	record()
 	convert()
+elif val == 4:
+	moveServo()
  
