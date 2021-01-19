@@ -33,8 +33,7 @@ def record():
 		# 	sleep(1)
 
 		camera.start_recording(file_name, quality = 20)
-
 		camera.wait_recording(constant.DURATION_SECS)
-
 		camera.stop_recording()
+		led.off()
 		time.sleep(3)
