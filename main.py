@@ -19,6 +19,9 @@ def convert():
 
 def moveServo():
 	print("Trying to move servo at GPIO 14")
+	led = Servo(23)
+	led.on()
+
 	servo = Servo(14)
 	servo.value = -1
 	sleep(2)
@@ -26,6 +29,7 @@ def moveServo():
 	sleep(2)
 	servo.value = 1
 	sleep(2)
+	led.off()
 
 print("What do you want to do?")
 print("1 record in chunks of 10 min")
