@@ -1,5 +1,6 @@
 import picamera
 from picamera import Color
+import RPi.GPIO as GPIO
 import os
 import time
 import json
@@ -20,6 +21,15 @@ def record():
 		file_name = constant.videos_path + timestamp + ".h264"
 		
 		print('Recording to: ' + file_name)
+
+		GPIO.setmode(GPIO.BOARD)
+		GPIO.setup(7, GPIO.OUT)
+
+		while True:
+			GPIO.output(23, True)
+			time.sleep(1)
+			GPIO.output(23, False)
+			time.sleep(1)
 
 		camera.start_recording(file_name, quality = 20)
 
