@@ -4,6 +4,7 @@ import constant
 import convertVideo
 
 from gpiozero import Servo
+from gpiozero import LED
 from time import sleep
 
 def record():
@@ -19,9 +20,8 @@ def convert():
 
 def moveServo():
 	print("Trying to move servo at GPIO 14")
-	led = Servo(23)
+	led = LED(23)
 	led.on()
-
 	servo = Servo(14)
 	servo.value = -1
 	sleep(2)
