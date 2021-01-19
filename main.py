@@ -19,7 +19,6 @@ def convert():
 		convertVideo.convertVideos()
 
 def moveServo():
-	print("Trying to move servo at GPIO 14")
 	led = LED(23)
 	led.on()
 	servo = Servo(14)

@@ -22,16 +22,8 @@ def record():
 		file_name = constant.videos_path + timestamp + ".h264"
 		
 		print('Recording to: ' + file_name)
-
 		led = LED(23)
 		led.blink()
-
-		# while True:
-		# 	led.on()
-		# 	sleep(1)
-		# 	led.off()
-		# 	sleep(1)
-
 		camera.start_recording(file_name, quality = 20)
 		camera.wait_recording(constant.DURATION_SECS)
 		camera.stop_recording()
